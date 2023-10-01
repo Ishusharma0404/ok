@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style1.css">
+
+   
+
+    <div  class ="typewriter">
+       <center> <h1><><em></em> Enter your city  name</em></h1> </center>
+  <center> <br>
+   
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"
+    integrity="sha512-eSeh0V+8U3qoxFnK3KgBsM69hrMOGMBy3CNxq/T4BArsSQJfKVsKb5joMqIPrNMjRQSTl4xG8oJRpgU2o9I7HQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
+    integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    </head>
+    <body>
+    
+    <select data-placeholder="Choose your city..." class="ch">
+    <option></option>
+    <option>Agartala</option>
+    <option>Agra</option>
+    <option>Ahmedabad</option>
+    <option>Bangalore</option>
+    <option>Bhopal</option>
+    <option>Bhilai</option>
+    <option>Chandigarh</option>
+    <option>Gurgaon</option>
+    <option>Hyderabad</option>
+    <option>Jaipur</option>
+    <option>Kolkata</option>
+    <option>Mumbai</option>
+    <option>Nagpur</option>
+    <option>Noida</option>
+    <option>Pune</option>
+    <option>Rajkot</option>
+    <option>Raipur</option>
+    </select>
+    <script>
+        $(document).ready(function () {
+          $(".ch").chosen({
+            width: "95%",
+            no_results_text: "Oops, nothing found!",
+            allow_single_deselect: true,
+          });
+        });
+      </script>
+    
+ <br>
+         
+    </center>
+
+        <hr>
+      
+        <h3><em>"Genius is one percent inspiration and ninety-nine percent perspiration"</em></h3>
+        <br>
+        <div class="typewriter">
+          <center> <h1><> Enter your  intrest </em></h1> </center> 
+        
+
+        <center><br>
+            
+          <script
+          src="https://code.jquery.com/jquery-3.6.0.js"
+          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          crossorigin="anonymous"
+          ></script>
+          <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"
+          integrity="sha512-eSeh0V+8U3qoxFnK3KgBsM69hrMOGMBy3CNxq/T4BArsSQJfKVsKb5joMqIPrNMjRQSTl4xG8oJRpgU2o9I7HQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          ></script>
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
+          integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          />
+          <title>Document</title>
+          </head>
+          <body>
+          
+          <select data-placeholder="Choose your intrest..." class="ch">
+          <option>choose your intrest</option>
+          <option>horror</option>
+          <option>techical</option>
+          <option>comedy</option>
+          
+          </select>
+          <script>
+              $(document).ready(function () {
+                $(".ch").chosen({
+                  width: "95%",
+                  no_results_text: "Oops, nothing found!",
+                  allow_single_deselect: true,
+                });
+              });
+            </script>
+          
+            
+                  <hr size="30%" >
+                  <h2> Upload Image</h2>
+                  <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <button type="button" onclick="uploadImage()">Upload</button>
+                </form>
+                <img id="previewImage" src="" alt="Preview Image" style="display: none; max-width: 300px;">
+                <p id="uploadStatus"></p>
+            
+                <script>
+                    function uploadImage() {
+                        const fileInput = document.getElementById('imageInput');
+                        const previewImage = document.getElementById('previewImage');
+                        const uploadStatus = document.getElementById('uploadStatus');
+            
+                        const file = fileInput.files[0];
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(event) {
+                                previewImage.src = event.target.result;
+                                previewImage.style.display = 'block';
+            
+                                // You can add code here to send the file to a server for actual upload.
+                                // For example, using AJAX or Fetch API.
+            
+                                uploadStatus.textContent = 'Image uploaded successfully!';
+                            };
+                            reader.readAsDataURL(file);
+                        } else {
+                            uploadStatus.textContent = 'Please select an image to upload.';
+                        }
+                    }
+                </script>
+
+                  <center>
+                              <div class="bottom-container">
+                                <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+                                <a class="footer-link" href="https://twitter.com/">Twitter</a>
+                                <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+                                <p>© Name Surname.</p> 
+                                
+                              </div> </center>
+                   
+                    
+                   
+                  
+
+
+    <!-- ordered list -->
+    
+    <!-- linking javascript -->
+    <script src="./index.js"></script>
+</div> 
+
+
+
+
+
+
+</body>
+</html>
